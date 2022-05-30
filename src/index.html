@@ -2,13 +2,15 @@
 <html lang="en">
   @@include('html/head.html', { "title":"Главная" })
   <body>
-    <!-- header -->
-    @@include('html/header.html', {})
-    <!-- header-end -->
-
-    <!-- footer -->
-    @@include('html/footer.html', {})
-    <!-- footer-end -->
+    <div class="wrapper">
+      <!-- header -->
+      @@include('html/header.html', {})
+      <!-- header-end -->
+      <main class="page"></main>
+      <!-- footer -->
+      @@include('html/footer.html', {})
+      <!-- footer-end -->
+    </div>
     <script src="js/app.min.js"></script>
   </body>
 </html>
