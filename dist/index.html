@@ -13,17 +13,17 @@
       <!-- header -->
 <header class="header">
   <div class="header__container _container">
+    <div class="icon-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <a href="#" class="header__logo">
       <img src="img/logo/logo-left.png" alt="" />
       <img src="img/logo/logo-right.png" alt="" />
     </a>
 
     <div class="header__menu menu">
-      <div class="menu__icon icon-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
       <nav class="menu__body">
         <ul class="menu__list">
           <li><a href="#" class="menu__link">Главная</a></li>
@@ -35,7 +35,9 @@
       </nav>
     </div>
     <div class="header__actions actions-header">
-      <a href="#" class="actions-header__region">Выбор региона </a>
+      <a data-da=".menu__body,767,1" href="#" class="actions-header__region"
+        ><span>Выбор региона</span>
+      </a>
       <div class="actions-header__user user-header">
         <div class="user-header__icon">
           <img src="img/icons/person.png" alt="" />
@@ -72,7 +74,42 @@
 </header>
 
       <!-- header-end -->
-      <main class="page"></main>
+      <main class="page">
+        <div class="main-slider">
+          <div class="main-slider__body">
+            <div class="main-slider__item item-main-slider">
+              <div class="item-main-slider__content">
+                <div class="item-main-slider__container _container">
+                  <div class="title">
+                    <div class="title__item">Только эксклюзивные</div>
+                    <div
+                      class="title__main title__main_white title__main_regular"
+                    >
+                      Лоты под аукцион и свободную продажу
+                    </div>
+                  </div>
+                  <div class="item-main-slider__text">
+                    Мы собираем эксклюзивную публику и эксклюзивные лоты, даем
+                    удобный и автоматизированный сервис по покупке и продаже, а
+                    так же выставлению лотов на аукцион, предоставляем личные
+                    кабинеты, а так же оказываем сопутствующие услуги с продажей
+                    редких и дорогих вещей
+                  </div>
+                  <a href="#" class="item-main-slider__btn btn">
+                    <span class="btn__body">
+                      <span>Присоединиться</span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="item-main-slider__bg _ibg">
+                <img src="img/main-screen/background.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="main-slider__control"></div>
+        </div>
+      </main>
       <!-- footer -->
       <!-- footer -->
       <!-- footer-end -->

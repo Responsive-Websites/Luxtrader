@@ -1,17 +1,17 @@
 <!-- header -->
 <header class="header">
   <div class="header__container _container">
+    <div class="icon-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <a href="#" class="header__logo">
       <img src="@img/logo/logo-left.png" alt="" />
       <img src="@img/logo/logo-right.png" alt="" />
     </a>
 
     <div class="header__menu menu">
-      <div class="menu__icon icon-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
       <nav class="menu__body">
         <ul class="menu__list">
           <li><a href="#" class="menu__link">Главная</a></li>
@@ -23,7 +23,9 @@
       </nav>
     </div>
     <div class="header__actions actions-header">
-      <a href="#" class="actions-header__region">Выбор региона </a>
+      <a data-da=".menu__body,767,1" href="#" class="actions-header__region"
+        ><span>Выбор региона</span>
+      </a>
       <div class="actions-header__user user-header">
         <div class="user-header__icon">
           <img src="@img/icons/person.png" alt="" />

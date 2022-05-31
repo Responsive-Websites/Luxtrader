@@ -1,8 +1,127 @@
 $fontfamily: 'PT Sans', sans-serif;
 
+body {
+  font-family: $fontfamily;
+}
+
 ._container {
   max-width: 950px;
   margin: 0 auto;
   box-sizing: content-box;
   padding: 0px 15px;
+}
+
+._ibg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+._ibg img {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.title {
+  &__item {
+    font-family: ceremonious_one;
+    color: #bb9c66;
+    font-size: 40px;
+    margin-bottom: 23px;
+  }
+  &__main {
+    font-family: pfdintextcondpro;
+    text-transform: uppercase;
+    font-size: 35px;
+    font-weight: 500;
+    letter-spacing: 5.25px;
+    &_white {
+      color: #fff;
+    }
+    &_regular {
+      font-weight: 400;
+    }
+  }
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    height: 3px;
+    width: 100%;
+  }
+
+  &::before {
+    background-color: #c3a774;
+    top: 0;
+  }
+  &::after {
+    background-color: #8f6630;
+    bottom: 0;
+  }
+
+  @media screen and (min-width: 992px) {
+    &:hover {
+    }
+  }
+  &._fw {
+    width: 100%;
+  }
+  &__body {
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      height: 100%;
+      width: 3px;
+      background-image: linear-gradient(to top, #8f6630, #c3a774);
+    }
+    &::before {
+      left: 0;
+    }
+    &::after {
+      right: 0;
+    }
+
+    & span {
+      min-height: 50px;
+      color: #fff;
+      font-size: 15px;
+      text-transform: uppercase;
+      font-family: pfdintextcondpro;
+
+      padding: 0px 50px;
+      letter-spacing: 2px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      &::after {
+        content: '';
+        height: 50%;
+        opacity: 0.06;
+        background-image: linear-gradient(
+          to top,
+          #bb9c66 0%,
+          rgba(187, 156, 102, 0) 100%
+        );
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+      }
+    }
+  }
 }
