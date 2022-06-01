@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css">
-    <title>Главная</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <title>Главная</title>
 </head>
+
   <body>
     <div class="wrapper">
       <!-- header -->
@@ -75,25 +77,46 @@
 
       <!-- header-end -->
       <main class="page">
-        <div class="main-slider">
-          <div class="main-slider__body">
-            <div class="main-slider__item item-main-slider">
+        <div class="swiper main-slider">
+          <div class="main-slider__body swiper-wrapper">
+            <div class="main-slider__item item-main-slider swiper-slide">
               <div class="item-main-slider__content">
                 <div class="item-main-slider__container _container">
                   <div class="title">
                     <div class="title__item">Только эксклюзивные</div>
-                    <div
-                      class="title__main title__main_white title__main_regular"
-                    >
+                    <div class="title__main title__main_white title__main_regular">
                       Лоты под аукцион и свободную продажу
                     </div>
                   </div>
                   <div class="item-main-slider__text">
-                    Мы собираем эксклюзивную публику и эксклюзивные лоты, даем
-                    удобный и автоматизированный сервис по покупке и продаже, а
-                    так же выставлению лотов на аукцион, предоставляем личные
-                    кабинеты, а так же оказываем сопутствующие услуги с продажей
-                    редких и дорогих вещей
+                    Мы собираем эксклюзивную публику и эксклюзивные лоты, даем удобный и автоматизированный сервис по
+                    покупке и продаже, а так же выставлению лотов на аукцион, предоставляем личные кабинеты, а так же
+                    оказываем сопутствующие услуги с продажей редких и дорогих вещей
+                  </div>
+                  <a href="#" class="item-main-slider__btn btn">
+                    <span class="btn__body">
+                      <span>Присоединиться</span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="item-main-slider__bg _ibg">
+                <img src="img/main-screen/background.jpg" alt="" />
+              </div>
+            </div>
+            <div class="main-slider__item item-main-slider swiper-slide">
+              <div class="item-main-slider__content">
+                <div class="item-main-slider__container _container">
+                  <div class="title">
+                    <div class="title__item">Только эксклюзивные</div>
+                    <div class="title__main title__main_white title__main_regular">
+                      Лоты под аукцион и свободную продажу
+                    </div>
+                  </div>
+                  <div class="item-main-slider__text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur sunt ad commodi. Provident
+                    cumque facilis consequatur error, reprehenderit veniam vel molestiae minus nulla neque rerum,
+                    aperiam amet? Soluta, impedit quam.
                   </div>
                   <a href="#" class="item-main-slider__btn btn">
                     <span class="btn__body">
@@ -107,13 +130,23 @@
               </div>
             </div>
           </div>
-          <div class="main-slider__control"></div>
+          <div class="main-slider__control control-main-slider">
+            <div class="control-main-slider__arrow control-main-slider__arrow_prev"></div>
+
+            <div class="control-main-slider__decor">
+              <img src="img/main-screen/round.png" alt="" />
+            </div>
+
+            <div class="control-main-slider__arrow control-main-slider__arrow_next"></div>
+          </div>
         </div>
       </main>
       <!-- footer -->
       <!-- footer -->
       <!-- footer-end -->
     </div>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/app.min.js"></script>
   </body>
 </html>

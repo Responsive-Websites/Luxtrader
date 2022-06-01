@@ -1,19 +1,55 @@
 .page {
+  .main-slider {
+    overflow: visible;
+  }
 }
+
 .main-slider {
+  position: relative;
+
+  .swiper-wrapper {
+  }
   &__body {
+    .swiper-slide {
+      height: auto;
+    }
   }
 
   &__item {
   }
 
   &__control {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, 50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+      content: '';
+      background-color: #fff;
+      position: absolute;
+      width: 70%;
+      height: 70%;
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    z-index: 3;
   }
 }
+
 .item-main-slider {
   position: relative;
   padding: 30px 0px 100px;
   text-align: center;
+
   &__content {
     position: relative;
     z-index: 2;
@@ -39,5 +75,40 @@
     left: 0;
     width: 100%;
     height: 100%;
+  }
+}
+
+.control-main-slider {
+  &__arrow {
+    position: relative;
+    width: 14px;
+    height: 24px;
+    background: url('../../img/main-screen/arrow-left.png') 0 0/14px no-repeat;
+    z-index: 2;
+    cursor: pointer;
+    &_next {
+      transform: rotate(-180deg);
+    }
+    &_prev {
+    }
+  }
+
+  &__decor {
+    position: relative;
+    z-index: 2;
+    margin: 0px 12px;
+    & img {
+      width: 20px;
+    }
+
+    animation: rotate 5s infinite linear;
+  }
+}
+
+@keyframes rotate {
+  0% {
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

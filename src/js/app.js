@@ -26,8 +26,7 @@ function ibg() {
   let ibg = document.querySelectorAll('._ibg');
   for (var i = 0; i < ibg.length; i++) {
     if (ibg[i].querySelector('img')) {
-      ibg[i].style.backgroundImage =
-        'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
+      ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
     }
   }
 }
@@ -67,23 +66,13 @@ DynamicAdapt.prototype.init = function () {
   this.mediaQueries = Array.prototype.map.call(
     this.оbjects,
     function (item) {
-      return (
-        '(' +
-        this.type +
-        '-width: ' +
-        item.breakpoint +
-        'px),' +
-        item.breakpoint
-      );
+      return '(' + this.type + '-width: ' + item.breakpoint + 'px),' + item.breakpoint;
     },
     this
   );
-  this.mediaQueries = Array.prototype.filter.call(
-    this.mediaQueries,
-    function (item, index, self) {
-      return Array.prototype.indexOf.call(self, item) === index;
-    }
-  );
+  this.mediaQueries = Array.prototype.filter.call(this.mediaQueries, function (item, index, self) {
+    return Array.prototype.indexOf.call(self, item) === index;
+  });
 
   // навешивание слушателя на медиа-запрос
   // и вызов обработчика при первом запуске
@@ -94,12 +83,9 @@ DynamicAdapt.prototype.init = function () {
     const mediaBreakpoint = mediaSplit[1];
 
     // массив объектов с подходящим брейкпоинтом
-    const оbjectsFilter = Array.prototype.filter.call(
-      this.оbjects,
-      function (item) {
-        return item.breakpoint === mediaBreakpoint;
-      }
-    );
+    const оbjectsFilter = Array.prototype.filter.call(this.оbjects, function (item) {
+      return item.breakpoint === mediaBreakpoint;
+    });
     matchMedia.addListener(function () {
       _this.mediaHandler(matchMedia, оbjectsFilter);
     });
@@ -204,3 +190,19 @@ DynamicAdapt.prototype.arraySort = function (arr) {
 
 const da = new DynamicAdapt('max');
 da.init();
+
+//slider
+
+new Swiper('.main-slider', {
+  navigation: {
+    nextEl: '.control-main-slider__arrow_next',
+    prevEl: '.control-main-slider__arrow_prev',
+  },
+  loop: true,
+  observer: true,
+  observeParents: true,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  autoHeight: false,
+  speed: 800,
+});

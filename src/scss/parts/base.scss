@@ -41,11 +41,16 @@ body {
     font-size: 35px;
     font-weight: 500;
     letter-spacing: 5.25px;
+    line-height: calc(40 / 35);
     &_white {
       color: #fff;
     }
     &_regular {
       font-weight: 400;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 30px;
     }
   }
 }
@@ -71,10 +76,6 @@ body {
     bottom: 0;
   }
 
-  @media screen and (min-width: 992px) {
-    &:hover {
-    }
-  }
   &._fw {
     width: 100%;
   }
@@ -110,17 +111,24 @@ body {
       position: relative;
       &::after {
         content: '';
-        height: 50%;
+        transition: all 0.6s ease 0s;
+        height: 0%;
         opacity: 0.06;
-        background-image: linear-gradient(
-          to top,
-          #bb9c66 0%,
-          rgba(187, 156, 102, 0) 100%
-        );
+        background-image: linear-gradient(to top, #bb9c66 0%, rgba(187, 156, 102, 0) 100%);
         top: 0;
         left: 0;
         position: absolute;
         width: 100%;
+      }
+    }
+  }
+  @media screen and (min-width: 992px) {
+    &:hover {
+      .btn__body span {
+        &::after {
+          height: 100%;
+          opacity: 0.3;
+        }
       }
     }
   }
