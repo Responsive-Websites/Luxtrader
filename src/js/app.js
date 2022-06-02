@@ -193,7 +193,7 @@ da.init();
 
 //slider
 
-new Swiper('.main-slider', {
+let main_slider = new Swiper('.main-slider', {
   navigation: {
     nextEl: '.control-main-slider__arrow_next',
     prevEl: '.control-main-slider__arrow_prev',
@@ -205,4 +205,36 @@ new Swiper('.main-slider', {
   spaceBetween: 0,
   autoHeight: false,
   speed: 800,
+});
+
+let lots_slider = new Swiper('.lots__slider', {
+  navigation: {
+    nextEl: '.control-slider-lots__arrow_next',
+    prevEl: '.control-slider-lots__arrow_prev',
+  },
+  loop: true,
+  observer: true,
+  observeParents: true,
+  slidesPerView: 3,
+  spaceBetween: 0,
+  autoHeight: false,
+  speed: 800,
+  // on: {
+  //   lazyImageReady: function () {
+  //     ibg();
+  //   },
+  // },
+
+  //mobile first
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    550: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+  },
 });

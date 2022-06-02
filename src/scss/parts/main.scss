@@ -4,6 +4,8 @@
   }
 }
 
+//main block slider =======================
+
 .main-slider {
   position: relative;
 
@@ -53,15 +55,21 @@
   &__content {
     position: relative;
     z-index: 2;
+    height: 100%;
   }
 
   &__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   &__text {
     color: #fff;
     font-size: 15px;
     line-height: calc(25 / 15);
 
+    flex: 1 1 auto;
     max-width: 700px;
     margin: 0 auto;
     margin-top: 25px;
@@ -110,5 +118,364 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+//========================================
+
+// lots block ============================
+
+.lots {
+  padding: 85px 0px 63px 0px;
+
+  & .swiper {
+    margin: 0px -50px;
+    @media screen and (max-width: 980px) {
+      margin: 0px -15px;
+    }
+  }
+  &__container {
+  }
+
+  &__header {
+    margin-bottom: 40px;
+  }
+
+  &__slider {
+  }
+}
+
+.block-header {
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__decor {
+  }
+}
+.block-decor {
+  display: flex;
+  align-items: center;
+  &__items {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    &::before {
+      content: '';
+      height: 1px;
+
+      background-color: #bb9c66;
+      flex: 1 1 auto;
+    }
+    &::after {
+      content: '';
+      height: calc(25px * 0.721);
+      border: 1px solid #bb9c66;
+      transform: rotate(-45deg);
+      flex: 0 0 calc(25px * 0.721);
+
+      margin: 0px 5px;
+    }
+    & span {
+      display: flex;
+      align-items: center;
+      margin: 0 5px;
+      &::before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 1px solid #bb9c66;
+        flex: 0 0 10px;
+
+        margin: 0px 5px;
+      }
+      &::after {
+        content: '';
+
+        height: calc(15px * 0.721);
+        border: 1px solid #bb9c66;
+        transform: rotate(-45deg);
+        width: calc(15px * 0.721);
+        flex: 0 0 calc(15px * 0.721);
+      }
+    }
+
+    &:last-child {
+      flex-direction: row-reverse;
+
+      & span {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  &__icon {
+    flex: 0 0 145px;
+    text-align: center;
+    & img {
+      max-width: 100%;
+    }
+    @media screen and (max-width: 767px) {
+      flex: 0 0 95px;
+    }
+  }
+}
+
+.slider-lots {
+  & .swiper-wrapper {
+    align-items: stretch;
+  }
+
+  &__body {
+    margin-bottom: 50px;
+    & .swiper-slide {
+      height: auto;
+    }
+  }
+
+  &__slide {
+    padding: 0px 50px;
+    @media screen and (max-width: 980px) {
+      padding: 0px 15px;
+    }
+  }
+
+  &__control {
+  }
+}
+.control-slider-lots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__arrow {
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    & span {
+      background: url('../../img/watch/arrow.png') left no-repeat;
+      flex: 0 0 108px;
+      width: 108px;
+      height: 35px;
+      overflow: hidden;
+      @media screen and (max-width: 450px) {
+        flex: 0 0 50px;
+      }
+    }
+
+    &::after {
+      content: '';
+      width: 15px;
+      height: 15px;
+
+      margin: 0px 5px;
+
+      border: 1px solid #bb9c66;
+      border-radius: 50%;
+    }
+    &:last-child {
+      flex-direction: row-reverse;
+
+      & span {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  &__link {
+    background: url('../../img/watch/circle.png') 0 0 no-repeat;
+
+    height: 100px;
+    flex: 0 0 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+    color: #000;
+    font-weight: 500;
+    font-family: pfdintextcondpro;
+    text-transform: uppercase;
+
+    margin: 0px 20px;
+  }
+}
+
+.lot {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+  &__header {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+  &__image {
+    display: block;
+    padding-bottom: 98%;
+    border: 3px solid #bb9c66;
+  }
+
+  &__timer {
+  }
+
+  &__title {
+    font-family: pfdintextcondpro;
+    font-size: 21px;
+    font-weight: 500;
+    color: #000;
+    text-transform: uppercase;
+    line-height: calc(25 / 21);
+    flex: 1 1 auto;
+
+    position: relative;
+    z-index: 2;
+
+    margin-bottom: calc(27px / 21px) * 1em;
+
+    @media screen and (max-width: 980px) {
+      font-size: 18px;
+    }
+    @media screen and (min-width: 992px) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__info {
+  }
+
+  &__btn {
+    margin: 0 25px;
+  }
+}
+.timer-lot {
+  width: 72px;
+  height: 72px;
+  transform: translate(-50%, 50%);
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+
+  flex-direction: column;
+
+  padding-top: 2px;
+
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  & div {
+    position: relative;
+    z-index: 2;
+  }
+
+  &::before {
+    content: '';
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-45deg);
+  }
+  &__icon {
+    margin-bottom: 5px;
+  }
+
+  &__item {
+    font-size: 25px;
+    font-family: BravoRGRegular;
+  }
+}
+
+.info-lot {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+  &__statistic {
+    flex: 0 0 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &__icon {
+    width: calc(25px * 0.72);
+    height: calc(25px * 0.72);
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 10px;
+    & img {
+      position: relative;
+      z-index: 2;
+    }
+    &:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      transform: rotate(-45deg);
+      position: absolute;
+    }
+  }
+
+  &__value {
+    font-size: 14px;
+    border-bottom: 1px solid #bb9c66;
+    padding-bottom: 5px;
+  }
+
+  &__current-bet {
+    flex: 1 1 auto;
+
+    @media screen and (max-width: 980px) {
+      flex: 0 0 auto;
+    }
+  }
+}
+.current-bet-info-lot {
+  padding: 0px 5px;
+  position: relative;
+  @media screen and (max-width: 980px) {
+    padding: 0px 10px;
+  }
+  & div {
+    position: relative;
+    z-index: 2;
+  }
+  &:after {
+    content: '';
+    border: 1px solid #bb9c66;
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  &__label {
+    margin-bottom: 5px;
+  }
+
+  &__value {
+    font-family: BravoRGRegular;
+    font-size: 50px;
+    white-space: nowrap;
+    @media screen and (max-width: 980px) {
+      font-size: 40px;
+    }
+  }
+
+  &__currency {
   }
 }
