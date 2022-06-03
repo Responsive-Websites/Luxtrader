@@ -918,3 +918,240 @@ body {
     font-size: 40px;
   }
 }
+.categories {
+  margin-bottom: 70px;
+}
+.categories__items {
+  margin-bottom: 85px;
+}
+.categories__container {
+  overflow: hidden;
+  position: relative;
+}
+.categories__container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 45px;
+  background-color: #fff;
+  width: 100%;
+}
+.categories__row {
+  display: flex;
+  margin: 0px -50px;
+  padding-top: 33px;
+  position: relative;
+  flex-wrap: wrap;
+}
+.categories__row::before, .categories__row::after {
+  content: "";
+  position: absolute;
+  width: 17.28px;
+  height: 17.28px;
+  flex: 0 0 17.28px;
+  transform: translate(-50%, 0) rotate(-45deg);
+  border: 1px solid #bb9c66;
+  top: 3px;
+}
+.categories__row::before {
+  left: 33.333%;
+}
+@media screen and (max-width: 980px) {
+  .categories__row::before {
+    left: 50%;
+  }
+}
+.categories__row::after {
+  left: 66.667%;
+}
+@media screen and (max-width: 980px) {
+  .categories__row::after {
+    display: none;
+  }
+}
+.categories__column {
+  flex: 0 1 33.333%;
+  padding: 0px 50px 25px;
+  margin-bottom: 25px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.categories__column::before {
+  content: "";
+  background-color: #bb9c66;
+  width: 10px;
+  height: 10px;
+  flex: 0 0 10px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  transform: translate(-50%, 0px);
+}
+@media screen and (max-width: 980px) {
+  .categories__column {
+    flex: 0 1 50%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .categories__column {
+    flex: 1 1 100%;
+  }
+}
+.categories__decor {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 24px;
+  height: calc(100% + 9px);
+  transform: translate(50%, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 3;
+}
+.categories__decor:before {
+  content: "";
+  width: 2px;
+  opacity: 0.7;
+  flex: 1 1 auto;
+  background-color: #bb9c66;
+}
+.categories__decor::after {
+  content: "";
+  width: 17.28px;
+  height: 17.28px;
+  flex: 0 0 17.28px;
+  transform: rotate(-45deg);
+  border: 1px solid #bb9c66;
+  margin-top: 15px;
+}
+.categories__decor span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 auto;
+}
+.categories__decor span::before {
+  content: "";
+  background-color: #bb9c66;
+  width: 10px;
+  height: 10px;
+  flex: 0 0 10px;
+  border-radius: 50%;
+  margin: 20px 0px;
+}
+.categories__decor span:after {
+  content: "";
+  width: 2px;
+  opacity: 0.7;
+  flex: 1 1 auto;
+  background-color: #bb9c66;
+}
+.item {
+  position: relative;
+  padding: 30px 30px 40px 30px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 250px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 992px) {
+  .item:hover .item__bg {
+    transform: scale(1.1);
+  }
+}
+.item__link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.item__icon {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 22px;
+}
+.item__title {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: pfdintextcondpro;
+  font-size: 21px;
+  font-weight: 500;
+  flex: 1 1 auto;
+  line-height: 1.1904761905;
+  letter-spacing: 2.1px;
+}
+.item__deco {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.item__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: transform 0.8s ease 0s;
+}
+.item__bg::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(39, 46, 53);
+  opacity: 0.8;
+}
+
+.text-categories {
+  color: #333333;
+  font-size: 15px;
+  line-height: 1.6666666667;
+}
+.text-categories p:not(:last-child) {
+  margin-bottom: 25px;
+}
+.text-categories__body {
+  padding: 10px 0px 20px 130px;
+  background: url("../../img/icons/shapes-crop.png") left top/85px repeat-y;
+  position: relative;
+}
+.text-categories__body:before {
+  content: "";
+  background: url("../../img/icons/shapes-crop-top.png") 0 0/85px repeat;
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 85px;
+  height: 12px;
+}
+
+.services {
+  padding: 60px 0px 60px 0px;
+  background-color: #1c242a;
+}
+.services__header {
+  margin-bottom: 40px;
+}
+.services__row {
+  margin: 0px -50px;
+  display: flex;
+}
+.services__column {
+  padding: 0px 50px;
+  flex: 0 1 33.333%;
+}
