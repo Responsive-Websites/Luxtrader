@@ -238,3 +238,26 @@ let lots_slider = new Swiper('.lots__slider', {
     },
   },
 });
+
+let quote_slider = new Swiper('.slider-quotes', {
+  navigation: {
+    nextEl: '.control-slider-quotes__circle',
+  },
+  loop: true,
+  observer: true,
+  observeParents: true,
+  slidesPerView: 1,
+  speed: 800,
+  effect: 'fade',
+
+  on: {
+    lazyImageReady: function () {
+      ibg();
+    },
+  },
+  autoplay: {
+    delay: 4000,
+    stopOnLastSlide: false,
+    disableOnInteraction: true,
+  },
+});
