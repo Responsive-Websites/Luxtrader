@@ -486,8 +486,15 @@
 
 .categories {
   margin-bottom: 70px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 35px;
+  }
   &__items {
     margin-bottom: 85px;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 0px;
+    }
   }
 
   &__container {
@@ -732,6 +739,14 @@
       left: 0;
       width: 85px;
       height: 12px;
+
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      padding: 10px 0px 25px 0px;
+      background: none;
     }
   }
 }
@@ -851,16 +866,24 @@
 .quotes {
   padding-top: 64px;
   padding-bottom: 75px;
+  @media screen and (max-width: 767px) {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
   &__container {
   }
 
   &__header {
   }
   &__slider {
+    margin-top: 20px;
   }
 }
 .slider-quotes {
   &__body {
+    @media screen and (max-width: 570px) {
+      margin-bottom: 30px;
+    }
   }
 
   &__slide {
@@ -870,10 +893,14 @@
     &.swiper-slide-active {
       opacity: 1 !important;
     }
+    @media screen and (max-width: 570px) {
+      display: block;
+    }
   }
 
   &__image {
     flex: 0 0 calc(320px / 950px * 100%);
+    display: flex;
     justify-content: center;
     align-items: center;
     padding: 0px 20px;
@@ -961,6 +988,10 @@
 
 .info {
   padding: 0px 0px 75px 0px;
+
+  @media screen and (max-width: 767px) {
+    padding-bottom: 35px;
+  }
   &__container {
   }
 
@@ -968,6 +999,10 @@
     display: flex;
     margin: 0px -22px;
     flex-wrap: wrap;
+
+    @media screen and (max-width: 767px) {
+      display: block;
+    }
   }
 
   &__column {
@@ -977,6 +1012,9 @@
     &:last-child {
       margin-bottom: 0px;
       flex: 1 1 100%;
+    }
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
     }
   }
 
@@ -991,6 +1029,9 @@
 
   &__item {
     margin-bottom: 30px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 20px;
+    }
   }
 
   &__date {
@@ -1037,6 +1078,9 @@
   text-transform: uppercase;
   font-weight: 500;
   margin-bottom: 30px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 15px;
+  }
   & span {
     &:first-child {
       margin-right: 15px;
@@ -1053,6 +1097,9 @@
   &__body {
     display: flex;
     margin: 0px -22px;
+    @media screen and (max-width: 767px) {
+      display: block;
+    }
   }
 
   &__column {
@@ -1063,6 +1110,9 @@
   &__text {
     font-size: 15px;
     line-height: calc(21 / 15);
+    @media screen and (max-width: 767px) {
+      margin-bottom: 25px;
+    }
   }
 
   &__form {

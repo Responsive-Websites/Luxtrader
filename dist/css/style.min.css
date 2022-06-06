@@ -921,8 +921,18 @@ body {
 .categories {
   margin-bottom: 70px;
 }
+@media screen and (max-width: 767px) {
+  .categories {
+    margin-bottom: 35px;
+  }
+}
 .categories__items {
   margin-bottom: 85px;
+}
+@media screen and (max-width: 767px) {
+  .categories__items {
+    margin-bottom: 0px;
+  }
 }
 .categories__container {
   overflow: hidden;
@@ -1139,6 +1149,17 @@ body {
   width: 85px;
   height: 12px;
 }
+@media screen and (max-width: 767px) {
+  .text-categories__body:before {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .text-categories__body {
+    padding: 10px 0px 25px 0px;
+    background: none;
+  }
+}
 
 .services {
   padding: 60px 0px 40px 0px;
@@ -1237,6 +1258,21 @@ body {
   padding-top: 64px;
   padding-bottom: 75px;
 }
+@media screen and (max-width: 767px) {
+  .quotes {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+}
+.quotes__slider {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 570px) {
+  .slider-quotes__body {
+    margin-bottom: 30px;
+  }
+}
 .slider-quotes__slide {
   display: flex;
   align-items: center;
@@ -1245,8 +1281,14 @@ body {
 .slider-quotes__slide.swiper-slide-active {
   opacity: 1 !important;
 }
+@media screen and (max-width: 570px) {
+  .slider-quotes__slide {
+    display: block;
+  }
+}
 .slider-quotes__image {
   flex: 0 0 33.6842105263%;
+  display: flex;
   justify-content: center;
   align-items: center;
   padding: 0px 20px;
@@ -1320,10 +1362,20 @@ body {
 .info {
   padding: 0px 0px 75px 0px;
 }
+@media screen and (max-width: 767px) {
+  .info {
+    padding-bottom: 35px;
+  }
+}
 .info__row {
   display: flex;
   margin: 0px -22px;
   flex-wrap: wrap;
+}
+@media screen and (max-width: 767px) {
+  .info__row {
+    display: block;
+  }
 }
 .info__column {
   flex: 0 1 50%;
@@ -1334,8 +1386,18 @@ body {
   margin-bottom: 0px;
   flex: 1 1 100%;
 }
+@media screen and (max-width: 767px) {
+  .info__column {
+    margin-bottom: 30px;
+  }
+}
 .info__item {
   margin-bottom: 30px;
+}
+@media screen and (max-width: 767px) {
+  .info__item {
+    margin-bottom: 20px;
+  }
 }
 .info__date {
   color: #bb9c66;
@@ -1374,6 +1436,11 @@ body {
   font-weight: 500;
   margin-bottom: 30px;
 }
+@media screen and (max-width: 767px) {
+  .title-info {
+    margin-bottom: 15px;
+  }
+}
 .title-info span:first-child {
   margin-right: 15px;
   display: flex;
@@ -1385,6 +1452,11 @@ body {
   display: flex;
   margin: 0px -22px;
 }
+@media screen and (max-width: 767px) {
+  .subscribe__body {
+    display: block;
+  }
+}
 .subscribe__column {
   padding: 0px 22px;
   flex: 0 1 50%;
@@ -1392,6 +1464,11 @@ body {
 .subscribe__text {
   font-size: 15px;
   line-height: 1.4;
+}
+@media screen and (max-width: 767px) {
+  .subscribe__text {
+    margin-bottom: 25px;
+  }
 }
 .form-subscribe {
   height: 50px;

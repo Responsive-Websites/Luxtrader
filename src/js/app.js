@@ -260,4 +260,12 @@ let quote_slider = new Swiper('.slider-quotes', {
     stopOnLastSlide: false,
     disableOnInteraction: true,
   },
+  breakpoints: {
+    320: {
+      autoHeight: true,
+    },
+    570: {
+      autoHeight: false,
+    },
+  },
 });
