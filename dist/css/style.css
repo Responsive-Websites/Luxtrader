@@ -125,6 +125,9 @@ body {
   font-family: "PT Sans", sans-serif;
   scroll-behavior: smooth;
 }
+body._lock {
+  overflow: hidden;
+}
 
 ._container {
   max-width: 950px;
@@ -1531,6 +1534,14 @@ body {
   letter-spacing: 2.12px;
   background: url("../../img/quotes/arrowok.png") right no-repeat;
   padding-right: 32px;
+}
+@media screen and (min-width: 767px) {
+  .form-subscribe__btn {
+    transition: all 0.5s ease 0s;
+  }
+  .form-subscribe__btn:hover {
+    padding-left: 10px;
+  }
 }
 
 .footer {

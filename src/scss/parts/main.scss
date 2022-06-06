@@ -1166,6 +1166,12 @@
       background: url('../../img/quotes/arrowok.png') right no-repeat;
       padding-right: 32px;
     }
+    @media screen and (min-width: 767px) {
+      transition: all 0.5s ease 0s;
+      &:hover {
+        padding-left: 10px;
+      }
+    }
   }
 }
 

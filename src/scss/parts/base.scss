@@ -3,6 +3,9 @@ $fontfamily: 'PT Sans', sans-serif;
 body {
   font-family: $fontfamily;
   scroll-behavior: smooth;
+  &._lock {
+    overflow: hidden;
+  }
 }
 
 ._container {
