@@ -1,5 +1,8 @@
 .header {
-  position: relative;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
   z-index: 1000;
   background-color: #1c242a;
   &__container {
@@ -98,7 +101,14 @@
     text-transform: uppercase;
     color: #fff;
     letter-spacing: 1.4px;
+    transition: color 0.3s ease 0s;
 
+    &._active {
+      color: #bb9c66;
+    }
+    &:active {
+      color: #bb9c66;
+    }
     @media screen and (min-width: 992px) {
       &:hover {
         text-decoration: underline;

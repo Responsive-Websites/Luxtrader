@@ -123,6 +123,7 @@ h6 {
 }
 body {
   font-family: "PT Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 
 ._container {
@@ -142,6 +143,10 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+}
+
+.page {
+  padding-top: 75px;
 }
 
 ._ibg img {
@@ -258,7 +263,10 @@ body {
 }
 
 .header {
-  position: relative;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
   z-index: 1000;
   background-color: #1c242a;
 }
@@ -352,6 +360,13 @@ body {
   text-transform: uppercase;
   color: #fff;
   letter-spacing: 1.4px;
+  transition: color 0.3s ease 0s;
+}
+.menu__link._active, ._active.actions-header__region {
+  color: #bb9c66;
+}
+.menu__link:active, .actions-header__region:active {
+  color: #bb9c66;
 }
 @media screen and (min-width: 992px) {
   .menu__link:hover, .actions-header__region:hover {
@@ -1516,4 +1531,129 @@ body {
   letter-spacing: 2.12px;
   background: url("../../img/quotes/arrowok.png") right no-repeat;
   padding-right: 32px;
+}
+
+.footer {
+  background-color: #1c242a;
+  padding: 45px 0px;
+}
+.footer__contant {
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .footer__contant {
+    display: block;
+    text-align: center;
+  }
+}
+.footer__column:first-child {
+  flex: 0 0 180px;
+}
+.footer__column_full {
+  flex: 1 1 auto;
+}
+.footer__logo {
+  display: inline-block;
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 767px) {
+  .footer__logo {
+    margin: 0;
+  }
+}
+.footer__logo-parts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__info {
+  color: #bb9c66;
+}
+@media screen and (max-width: 767px) {
+  .footer__info {
+    margin-top: 25px;
+  }
+}
+.footer__menu {
+  padding: 0px 30px;
+}
+@media screen and (max-width: 767px) {
+  .footer__menu {
+    padding: 0px 15px;
+    margin-bottom: 20px;
+  }
+}
+.footer__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer__list li {
+  margin: 15px 15px 0px 0px;
+}
+@media screen and (max-width: 767px) {
+  .footer__list {
+    justify-content: center;
+  }
+  .footer__list li {
+    margin: 15px 7px 0px 7px;
+  }
+}
+.footer__link {
+  font-family: pfdintextcondpro;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__contacts {
+  text-align: right;
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+@media screen and (max-width: 767px) {
+  .footer__contacts {
+    text-align: center;
+    align-items: center;
+  }
+}
+.footer__phone {
+  white-space: nowrap;
+  display: flex;
+  color: #bb9c66;
+  font-family: BravoRGRegular;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+.footer__phone small {
+  font-size: 25px;
+  align-self: flex-start;
+  margin-right: 5px;
+  margin-top: 2px;
+}
+@media screen and (max-width: 991px) {
+  .footer__phone {
+    font-size: 40px;
+  }
+  .footer__phone small {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__phone {
+    margin-bottom: 10px;
+  }
+}
+.footer__callback {
+  color: #bb9c66;
+  background: url("../../img/icons/call.png") left no-repeat;
+  padding-left: 13px;
+}
+.footer__callback span {
+  border-bottom: 1px dashed;
 }

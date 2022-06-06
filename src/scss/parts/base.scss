@@ -2,6 +2,7 @@ $fontfamily: 'PT Sans', sans-serif;
 
 body {
   font-family: $fontfamily;
+  scroll-behavior: smooth;
 }
 
 ._container {
@@ -20,6 +21,10 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+}
+
+.page {
+  padding-top: 75px;
 }
 
 ._ibg img {
